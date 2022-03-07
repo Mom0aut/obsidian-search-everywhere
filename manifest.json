@@ -1,10 +1,10 @@
 {
 	"id": "obsidian-search-everywhere-plugin",
 	"name": "Search Everywhere",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"minAppVersion": "0.12.0",
-	"description": "This plugin simulate the Search Everywhere Feature from IntelliJ with Double Shift.",
-	"author": "Martin Reinhart",
+	"description": "Search Everywhere with pressing Double Shift like in IntelliJ",
+	"author": "Mom0",
 	"authorUrl": "https://obsidian.md",
 	"isDesktopOnly": true
 }
