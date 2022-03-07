@@ -5,7 +5,7 @@ Doube Press the SHIFT key to open the Obsidian Search Window.
 
 ## How to use
 
-- Just double press the SHIFT key to open the Search Window
+Just double press the SHIFT key to open the Search Window
 
 ## How to Install
 
