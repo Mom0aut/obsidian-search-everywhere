@@ -12,18 +12,16 @@ let pressed;
 let lastPressed: any;
 let isDoublePress: boolean;
 
-const handleDoublePresss = (key: { keyCode?: any; key?: any; })=> {
-    console.log(key.key, 'pressed two times');
-	simulateSearchHotKey();
-}
-
 const timeOut = () => setTimeout(() => isDoublePress = false, 500);
 
-const searchEverywhere = (key: { keyCode?: any; key?: any; }) => {
-    pressed = key.keyCode;
+const openSearchWhenDoubleShift = (key: { keyCode?: any; key?: any; }) => {
+	if(key.key != "Shift"){
+		return
+	}
+	pressed = key.keyCode;
     if (isDoublePress && pressed === lastPressed) {
         isDoublePress = false;
-        handleDoublePresss(key);
+		simulateSearchHotkey();
     } else {
         isDoublePress = true;
         timeOut();
@@ -31,7 +29,7 @@ const searchEverywhere = (key: { keyCode?: any; key?: any; }) => {
     lastPressed = pressed;
 }
 
-function simulateSearchHotKey(){
+function simulateSearchHotkey(){
 	window.dispatchEvent(new KeyboardEvent('keydown', {
 		key: "f",
 		keyCode: 70,
@@ -43,25 +41,18 @@ function simulateSearchHotKey(){
 	  }));
 }
 
-function addDoubleKeypressEventListener() {
-	window.addEventListener('keydown', (e) => {
-		if (e.keyCode == 16) {
-			searchEverywhere(e);
-		}
-	});
-}
-
 export default class MyPlugin extends Plugin {
 	settings: SearchEverywhereSettings;
 	async onload() {
 		await this.loadSettings();
-		addDoubleKeypressEventListener();
+		window.addEventListener('keydown', openSearchWhenDoubleShift);
 		// This adds a settings tab so the user can configure various aspects of the plugin
 		//this.addSettingTab(new SearchEverywhereSettingTab(this.app, this));
 		// When registering intervals, this function will automatically clear the interval when the plugin is disabled.
 		this.registerInterval(window.setInterval(() => console.log('setInterval'), 5 * 60 * 1000));
 	}
 	onunload() {
+		window.removeEventListener('keydown', openSearchWhenDoubleShift)
 	}
 
 	async loadSettings() {
