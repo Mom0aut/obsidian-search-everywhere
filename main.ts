@@ -30,15 +30,36 @@ const openSearchWhenDoubleShift = (key: { keyCode?: any; key?: any; }) => {
 }
 
 function simulateSearchHotkey(){
-	window.dispatchEvent(new KeyboardEvent('keydown', {
-		key: "f",
-		keyCode: 70,
-		code: "KeyE",
-		which: 70,
-		shiftKey: true,
-		ctrlKey: true,
-		metaKey: false
-	  }));
+	var detectOS = "Unknown OS";
+	if (navigator.appVersion.indexOf("Win") != -1) detectOS = "Windows";
+	if (navigator.appVersion.indexOf("Mac") != -1) detectOS = "MacOS";
+	if (navigator.appVersion.indexOf("Linux") != -1) detectOS = "Linux";
+	console.log("Device OS is: " + detectOS);
+	if (detectOS === "MacOS") {
+		window.dispatchEvent(
+			new KeyboardEvent("keydown", {
+				key: "f",
+				keyCode: 70,
+				code: "KeyE",
+				which: 70,
+				shiftKey: true,
+				ctrlKey: false,
+				metaKey: true,
+			})
+		);
+	} else {
+		window.dispatchEvent(
+			new KeyboardEvent("keydown", {
+				key: "f",
+				keyCode: 70,
+				code: "KeyE",
+				which: 70,
+				shiftKey: true,
+				ctrlKey: true,
+				metaKey: false,
+			})
+		);
+	}
 }
 
 export default class MyPlugin extends Plugin {
