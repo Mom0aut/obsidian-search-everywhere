@@ -6,14 +6,14 @@ let isDoublePress: boolean;
 
 const timeOut = () => setTimeout(() => isDoublePress = false, 500);
 
-function openSearchWhenDoubleShift(key:any){
+function openSearchWhenDoubleShift(key:any,app:App){
 	if(key.key != "Shift"){
 		return
 	}
 	pressed = key.keyCode;
 	if (isDoublePress && pressed === lastPressed) {
 		isDoublePress = false;
-		simulateSearchHotkey();
+		simulateSearchHotkey(app);
 	} else {
 		isDoublePress = true;
 		timeOut();
@@ -21,17 +21,17 @@ function openSearchWhenDoubleShift(key:any){
 	lastPressed = pressed;
 }
 
-function simulateSearchHotkey(){
+function simulateSearchHotkey(app:App){
 	// @ts-ignore
-	this.app.commands.executeCommandById('global-search:open')
+	app.commands.executeCommandById('global-search:open')
 }
 
 export default class SearchEverywherePlugin extends Plugin {
 	async onload() {
-		window.addEventListener('keydown', openSearchWhenDoubleShift);
+		window.addEventListener('keydown', (event) =>openSearchWhenDoubleShift(event,this.app));
 	}
 	onunload() {
-		window.removeEventListener('keydown', openSearchWhenDoubleShift)
+		window.removeEventListener('keydown', (event) =>openSearchWhenDoubleShift(event,this.app));
 	}
 }
 
