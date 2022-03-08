@@ -1,7 +1,7 @@
 # Obsidian Search Everywhere Plugin
 
 This Plugin simulates the Search Everywhere Hotkey from IntelliJ.
-Doube Press the SHIFT key to open the Obsidian Search Window. 
+Double Press the SHIFT key to open the Obsidian Search Window. 
 
 ## How to use
 
