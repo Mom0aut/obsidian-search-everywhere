@@ -1,3 +1,4 @@
+# TEST
 <p align="left">
     <a href="https://github.com/mom0aut/obsidian-search-everywhere/releases">
         <img src="https://img.shields.io/github/downloads/mom0aut/obsidian-search-everywhere/total.svg"
