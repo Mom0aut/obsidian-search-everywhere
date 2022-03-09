@@ -1,3 +1,4 @@
+
 <p align="left">
     <a href="https://github.com/HEmile/obsidian-search-on-internet/releases">
         <img src="https://img.shields.io/github/downloads/HEmile/obsidian-search-on-internet/total.svg"
