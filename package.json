@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-search-everywhere-plugin",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Search Everywhere with pressing Double Shift like in IntelliJ",
 	"main": "main.js",
 	"scripts": {

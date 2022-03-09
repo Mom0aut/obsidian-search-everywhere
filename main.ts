@@ -28,10 +28,7 @@ function simulateSearchHotkey(app:App){
 
 export default class SearchEverywherePlugin extends Plugin {
 	async onload() {
-		window.addEventListener('keydown', (event) =>openSearchWhenDoubleShift(event,this.app));
-	}
-	onunload() {
-		window.removeEventListener('keydown', (event) =>openSearchWhenDoubleShift(event,this.app));
+		this.registerDomEvent(window, 'keydown', (event) =>openSearchWhenDoubleShift(event,this.app))
 	}
 }
 
