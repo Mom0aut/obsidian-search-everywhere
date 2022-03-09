@@ -2,19 +2,8 @@
     <a href="https://github.com/mom0aut/obsidian-search-everywhere/releases">
         <img src="https://img.shields.io/github/downloads/mom0aut/obsidian-search-everywhere/total.svg"
             alt="Downloads" width="110"></a> 
-	
     <a href="https://github.com/mom0aut/obsidian-search-everywhere/releases">
         <img src="https://img.shields.io/github/v/release/mom0aut/obsidian-search-everywhere"
-            alt="Github latest release" width="110"></a>
-</p>
-
-
-<p align="left">
-    <a href="https://github.com/HEmile/obsidian-search-on-internet/releases">
-        <img src="https://img.shields.io/github/downloads/HEmile/obsidian-search-on-internet/total.svg"
-            alt="Downloads" width="110"></a> 
-    <a href="https://github.com/HEmile/obsidian-search-on-internet/releases">
-        <img src="https://img.shields.io/github/v/release/HEmile/obsidian-search-on-internet"
             alt="Github latest release" width="100"></a>
    <a href="https://publish.obsidian.md/semantic-obsidian/Search+on+Internet+Plugin">
         <img src="https://img.shields.io/badge/docs-Obsidian-blue"
