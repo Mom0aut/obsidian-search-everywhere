@@ -2,7 +2,7 @@
 <p align="left">
     <a href="https://github.com/HEmile/obsidian-search-on-internet/releases">
         <img src="https://img.shields.io/github/downloads/HEmile/obsidian-search-on-internet/total.svg"
-            alt="Downloads" width="110"></a> 
+            alt="Downloads" width="100"></a> 
     <a href="https://github.com/HEmile/obsidian-search-on-internet/releases">
         <img src="https://img.shields.io/github/v/release/HEmile/obsidian-search-on-internet"
             alt="Github latest release" width="100"></a>
@@ -11,7 +11,7 @@
             alt="Documentation" width="100"></a>
     <a href="https://discord.gg/sAmSGpaPgM">
         <img src="https://img.shields.io/discord/794500624163143720?logo=discord"
-            alt="chat on Discord" width="120"></a>
+            alt="chat on Discord" width="100"></a>
 </p>
 
 # Obsidian Search Everywhere Plugin
