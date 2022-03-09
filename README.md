@@ -1,3 +1,12 @@
+<p align="left">
+    <a href="https://github.com/mom0aut/obsidian-search-everywhere/releases">
+        <img src="https://img.shields.io/github/downloads/mom0aut/obsidian-search-everywhere/total.svg"
+            alt="Downloads" width="110"></a> 
+    <a href="https://github.com/mom0aut/obsidian-search-everywhere/releases">
+        <img src="https://img.shields.io/github/v/release/mom0aut/obsidian-search-everywhere"
+            alt="Github latest release" width="100"></a>
+</p>
+
 # Obsidian Search Everywhere Plugin
 
 This Plugin simulates the Search Everywhere Hotkey from IntelliJ.
