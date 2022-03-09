@@ -15,6 +15,7 @@ function openSearchWhenDoubleShift(key:any,app:App){
 		isDoublePress = false;
 		simulateSearchHotkey(app);
 	} else {
+		console.log("One Time pressed!")
 		isDoublePress = true;
 		timeOut();
 	}
@@ -28,7 +29,7 @@ function simulateSearchHotkey(app:App){
 
 export default class SearchEverywherePlugin extends Plugin {
 	async onload() {
-		this.registerDomEvent(window, 'keydown', (event) => openSearchWhenDoubleShift(event,this.app))
+		this.registerDomEvent(window, 'keyup', (event) => openSearchWhenDoubleShift(event,this.app))
 	}
 }
 
