@@ -7,6 +7,7 @@
         <img src="https://img.shields.io/github/v/release/mom0aut/obsidian-search-everywhere"
             alt="Github latest release" width="100"></a>
 </p>
+
 # Obsidian Search Everywhere Plugin
 
 This Plugin simulates the Search Everywhere Hotkey from IntelliJ.
