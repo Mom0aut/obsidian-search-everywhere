@@ -1,25 +1,18 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Scope, Setting } from 'obsidian';
 
-let pressed;
-let lastPressed: any;
-let isDoublePress: boolean;
-
-const timeOut = () => setTimeout(() => isDoublePress = false, 500);
+let lastKeyupTime = 0;
 
 function openSearchWhenDoubleShift(key:any,app:App){
-	if(key.key != "Shift"){
-		return
+	if (key !== "Shift") {
+		lastKeyupTime = 0;
+		return;
 	}
-	pressed = key.keyCode;
-	if (isDoublePress && pressed === lastPressed) {
-		isDoublePress = false;
-		simulateSearchHotkey(app);
+	if (Date.now() - lastKeyupTime < 500) {
+		lastKeyupTime = 0;
+		simulateSearchHotkey(app)
 	} else {
-		console.log("One Time pressed!")
-		isDoublePress = true;
-		timeOut();
+		lastKeyupTime = Date.now();
 	}
-	lastPressed = pressed;
 }
 
 function simulateSearchHotkey(app:App){
@@ -29,8 +22,6 @@ function simulateSearchHotkey(app:App){
 
 export default class SearchEverywherePlugin extends Plugin {
 	async onload() {
-		this.registerDomEvent(window, 'keyup', (event) => openSearchWhenDoubleShift(event,this.app))
+		this.registerDomEvent(window, 'keyup', (event) => openSearchWhenDoubleShift(event.key,this.app))
 	}
 }
-
-
