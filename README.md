@@ -1,4 +1,12 @@
 # Obsidian Search Everywhere Plugin
+<p>
+ <a href="https://github.com/mom0aut/obsidian-search-everywhere/releases">
+        <img src="https://img.shields.io/github/downloads/mom0aut/obsidian-search-everywhere/total.svg"
+            alt="Downloads" width="110"></a> 
+    <a href="https://github.com/mom0aut/obsidian-search-everywhere/releases">
+        <img src="https://img.shields.io/github/v/release/mom0aut/obsidian-search-everywhere"
+            alt="Github latest release" width="110"></a>
+</p>
 
 This Plugin simulates the Search Everywhere Hotkey from IntelliJ.
 Double Press the SHIFT key to open the Obsidian Search Window. 
