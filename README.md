@@ -1,3 +1,4 @@
+Test
 # Obsidian Search Everywhere Plugin
 <p>
  <a href="https://github.com/mom0aut/obsidian-search-everywhere/releases">
